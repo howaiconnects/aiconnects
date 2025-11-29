@@ -1,0 +1,163 @@
+# AIConnects Platform - Code Ownership
+
+#
+
+# This file defines the code owners for the AIConnects monorepo.
+
+# Code owners are automatically requested for review when someone opens a pull request
+
+# that modifies code that they own.
+
+#
+
+# Syntax: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+#
+
+# Order matters: Last matching pattern takes precedence
+
+# ============================================================================
+
+# Global Ownership
+
+# ============================================================================
+
+# Default owners for everything in the repo (unless a later match overrides)
+
+- @adhameldeeb
+
+# ============================================================================
+
+# Applications
+
+# ============================================================================
+
+# Admin Dashboard - Next.js 15 + React 19
+
+/apps/admin/\*\* @adhameldeeb
+
+# User Application - Next.js 15 + React 19
+
+/apps/user/\*\* @adhameldeeb
+
+# Documentation Site - Future Docusaurus/Nextra
+
+/apps/docs/\*\* @adhameldeeb
+
+# ============================================================================
+
+# Shared Packages
+
+# ============================================================================
+
+# UI Components & Design System
+
+/packages/ui/\*\* @adhameldeeb
+
+# Authentication & Authorization (Azure Entra ID)
+
+/packages/auth/\*\* @adhameldeeb
+
+# AI & ML Integration
+
+/packages/ai/\*\* @adhameldeeb
+
+# Shared Configuration (ESLint, Prettier, Tailwind, PostCSS)
+
+/packages/config/\*\* @adhameldeeb
+
+# Testing Utilities
+
+/packages/testing/\*\* @adhameldeeb
+
+# ============================================================================
+
+# Backend Services
+
+# ============================================================================
+
+# REST API Service
+
+/services/api/\*\* @adhameldeeb
+
+# Background Workers (Queue Processing)
+
+/services/worker/\*\* @adhameldeeb
+
+# Webhook Handlers (GitHub, Stripe, etc.)
+
+/services/webhooks/\*\* @adhameldeeb
+
+# ============================================================================
+
+# Infrastructure & DevOps
+
+# ============================================================================
+
+# Infrastructure as Code (Azure Bicep, Terraform)
+
+/infra/\*\* @adhameldeeb
+
+# Azure Deployment Scripts
+
+/scripts/azure/\*\* @adhameldeeb
+
+# CI/CD Workflows
+
+/.github/workflows/\*\* @adhameldeeb
+
+# ============================================================================
+
+# Governance & Security
+
+# ============================================================================
+
+# Security Policy
+
+/SECURITY.md @adhameldeeb
+
+# GitHub Configuration
+
+/.github/\*\* @adhameldeeb
+
+# Root Configuration Files
+
+/package.json @adhameldeeb
+/pnpm-workspace.yaml @adhameldeeb
+/turbo.json @adhameldeeb
+/tsconfig.base.json @adhameldeeb
+
+# Environment Configuration
+
+/.env.example @adhameldeeb
+
+# Documentation
+
+/README.md @adhameldeeb
+/MIGRATION_STATUS.md @adhameldeeb
+/AZURE_RESOURCES_MANIFEST.md @adhameldeeb
+/MVP_AI_RESEARCH_PLATFORM_TODO.md @adhameldeeb
+
+# ============================================================================
+
+# Future Team Assignments
+
+# ============================================================================
+
+# When teams are created, replace @adhameldeeb with:
+
+# - @howaiconnects/frontend-team (apps/\*)
+
+# - @howaiconnects/design-system-team (packages/ui)
+
+# - @howaiconnects/backend-team (services/\*)
+
+# - @howaiconnects/security-team (packages/auth, SECURITY.md)
+
+# - @howaiconnects/ai-team (packages/ai)
+
+# - @howaiconnects/devops-team (infra, scripts, .github/workflows)
+
+# - @howaiconnects/docs-team (apps/docs, \*.md)
+
+# ============================================================================

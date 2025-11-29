@@ -1,0 +1,107 @@
+# Gitleaks Configuration for AIConnects
+# https://github.com/gitleaks/gitleaks
+
+title = "AIConnects Secrets Detection"
+
+[[rules]]
+id = "brightdata-api-token"
+description = "Bright Data API Token"
+regex = '''BRIGHTDATA_API_TOKEN\s*=\s*[^\s"']+'''
+tags = ["api-key", "brightdata"]
+
+[[rules]]
+id = "perplexity-api-key"
+description = "Perplexity API Key"
+regex = '''PERPLEXITY_API_KEY\s*=\s*[^\s"']+'''
+tags = ["api-key", "perplexity"]
+
+[[rules]]
+id = "openai-api-key"
+description = "OpenAI API Key"
+regex = '''(OPENAI_API_KEY|AZURE_OPENAI_API_KEY)\s*=\s*sk-[a-zA-Z0-9]{32,}'''
+tags = ["api-key", "openai"]
+
+[[rules]]
+id = "azure-ad-client-secret"
+description = "Azure AD Client Secret"
+regex = '''(ADMIN_AZURE_AD_CLIENT_SECRET|USER_AZURE_AD_CLIENT_SECRET|AZURE_AD_CLIENT_SECRET)\s*=\s*[^\s"']{32,}'''
+tags = ["secret", "azure-ad"]
+
+[[rules]]
+id = "nextauth-secret"
+description = "NextAuth Secret"
+regex = '''NEXTAUTH_SECRET\s*=\s*[^\s"']{32,}'''
+tags = ["secret", "nextauth"]
+
+[[rules]]
+id = "database-url"
+description = "Database Connection String"
+regex = '''DATABASE_URL\s*=\s*postgres(ql)?://[^:]+:[^@]+@[^\s"']+'''
+tags = ["connection-string", "database"]
+
+[[rules]]
+id = "redis-url"
+description = "Redis Connection String"
+regex = '''REDIS_URL\s*=\s*redis://[^:]*:[^@]+@[^\s"']+'''
+tags = ["connection-string", "redis"]
+
+[[rules]]
+id = "jwt-token"
+description = "JWT Token"
+regex = '''eyJ[a-zA-Z0-9_-]*\.eyJ[a-zA-Z0-9_-]*\.[a-zA-Z0-9_-]*'''
+tags = ["token", "jwt"]
+
+[[rules]]
+id = "azure-storage-connection"
+description = "Azure Storage Connection String"
+regex = '''(AZURE_STORAGE_CONNECTION_STRING\s*=\s*.*AccountKey=|AccountKey=[a-zA-Z0-9+/]{80,}==)'''
+tags = ["connection-string", "azure-storage"]
+
+[[rules]]
+id = "stripe-secret-key"
+description = "Stripe Secret Key"
+regex = '''STRIPE_SECRET_KEY\s*=\s*sk_(test|live)_[a-zA-Z0-9]{24,}'''
+tags = ["api-key", "stripe"]
+
+[[rules]]
+id = "sendgrid-api-key"
+description = "SendGrid API Key"
+regex = '''SENDGRID_API_KEY\s*=\s*SG\.[a-zA-Z0-9_-]{20,}'''
+tags = ["api-key", "sendgrid"]
+
+[[rules]]
+id = "generic-password"
+description = "Generic Password"
+regex = '''[a-zA-Z0-9_]*PASSWORD[a-zA-Z0-9_]*\s*=\s*[^\s"']{8,}'''
+tags = ["password"]
+
+[[rules]]
+id = "generic-secret"
+description = "Generic Secret"
+regex = '''[a-zA-Z0-9_]*SECRET[a-zA-Z0-9_]*\s*=\s*[^\s"']{16,}'''
+tags = ["secret"]
+
+[[rules]]
+id = "generic-token"
+description = "Generic Token"
+regex = '''[a-zA-Z0-9_]*TOKEN[a-zA-Z0-9_]*\s*=\s*[^\s"']{20,}'''
+tags = ["token"]
+
+[allowlist]
+description = "Allowlist for false positives"
+regexes = [
+  '''SECRET_EXAMPLE''',
+  '''TOKEN_PLACEHOLDER''',
+  '''\*\*\*REDACTED\*\*\*''',
+  '''your_.*_here''',
+  '''=\s*$''',  # Empty values
+  '''=\s*["']?\s*["']?$''',  # Empty quoted values
+  '''.env.example''',
+  '''.env.copilot.example''',
+]
+
+paths = [
+  '''.env.example''',
+  '''.env.copilot.example''',
+  '''.env*.example''',
+]

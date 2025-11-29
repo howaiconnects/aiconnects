@@ -1,0 +1,118 @@
+---
+name: Feature Request
+about: Suggest a new feature or enhancement
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: ["adhameldeeb"]
+---
+
+## Feature Description
+
+<!-- A clear and concise description of the feature you'd like to see -->
+
+## Problem Statement
+
+<!-- What problem does this feature solve? -->
+
+**Is your feature request related to a problem?**
+
+<!-- Example: I'm always frustrated when [...] -->
+
+## Proposed Solution
+
+<!-- Describe the solution you'd like to see implemented -->
+
+## Alternative Solutions
+
+<!-- Describe any alternative solutions or features you've considered -->
+
+## Use Cases
+
+<!-- Describe how this feature would be used -->
+
+1. **Use Case 1:**
+   - User: [e.g. Admin, End User, Developer]
+   - Scenario: [Describe the scenario]
+   - Expected Outcome: [What should happen]
+
+2. **Use Case 2:**
+   - User:
+   - Scenario:
+   - Expected Outcome:
+
+## Affected Workspaces
+
+<!-- Which parts of the monorepo would this feature impact? -->
+
+- [ ] `apps/admin`
+- [ ] `apps/user`
+- [ ] `apps/docs`
+- [ ] `packages/ui`
+- [ ] `packages/auth`
+- [ ] `packages/ai`
+- [ ] `packages/config`
+- [ ] `packages/testing`
+- [ ] `services/api`
+- [ ] `services/worker`
+- [ ] `services/webhooks`
+- [ ] Infrastructure
+- [ ] Other: ___________
+
+## Technical Considerations
+
+**Implementation Complexity:**
+
+- [ ] 🟢 Low - Simple change, minimal impact
+- [ ] 🟡 Medium - Moderate change, some refactoring needed
+- [ ] 🔴 High - Complex change, significant architectural impact
+
+**Dependencies:**
+
+<!-- Does this feature depend on other features or external services? -->
+
+- Depends on: ___________
+- Requires: ___________
+- Integrates with: ___________
+
+**Potential Risks:**
+
+<!-- Any potential risks or challenges with implementing this feature? -->
+
+## Mockups/Examples
+
+<!-- If applicable, add mockups, wireframes, or examples from other products -->
+
+## Priority
+
+**Business Value:**
+
+- [ ] 🔴 Critical - Core business requirement
+- [ ] 🟠 High - Significant competitive advantage
+- [ ] 🟡 Medium - Nice to have, improves UX
+- [ ] 🟢 Low - Minor improvement
+
+**User Impact:**
+
+- [ ] All users
+- [ ] Specific user segment: ___________
+- [ ] Admin users only
+- [ ] Internal team only
+
+## Success Criteria
+
+<!-- How will we know this feature is successful? -->
+
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3
+
+## Additional Context
+
+<!-- Add any other context, research, or screenshots about the feature request -->
+
+## Related Issues/PRs
+
+<!-- Link to related issues or discussions -->
+
+- Related to #
+- Depends on #
